@@ -1,0 +1,278 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: red;
+}
+
+.signin-btn {
+  color: white;
+  background-color: red;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.signin-btn:hover {
+  background-color: #b40606;
+}
+
+/* Hero Section */
+.hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/75b0ed49-75ab-4a63-bd45-37bc2c95cb73/web/PK-en-20250623-TRIFECTA-perspective_057d7e63-2447-4b69-889f-4fa825725588_large.jpg');
+
+
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  padding: 40px;
+  border-radius: 8px;
+  max-width: 700px;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.desc {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.email-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.email-form input {
+  padding: 12px;
+  width: 60%;
+  max-width: 400px;
+  border: none;
+  border-radius: 2px;
+  font-size: 16px;
+}
+
+.email-form button {
+  padding: 12px 24px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.email-form button:hover {
+  background-color: #b40606;
+}
+
+/* Trending Now */
+.trending {
+  padding: 60px 40px 40px;
+}
+
+.trending h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.trending-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  max-width: 180px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 6px;
+  transition: transform 0.3s;
+}
+
+.card span {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+/* Reasons Section */
+.reasons {
+  padding: 60px 40px;
+  background-color: #111;
+}
+
+.reasons h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+}
+
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.reason-box {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.reason-box h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* FAQ Section */
+.faq {
+  padding: 60px 40px;
+  background-color: #000;
+  border-top: 8px solid #222;
+}
+
+.faq h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.faq-box {
+  background-color: #222;
+  padding: 20px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: default;
+}
+
+/* Email Footer Section */
+.email-footer {
+  padding: 40px;
+  text-align: center;
+  border-top: 8px solid #222;
+}
+
+/* Footer */
+.footer {
+  background-color: #111;
+  padding: 40px;
+  color: #888;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0;
+  gap: 15px;
+}
+
+.footer-links a {
+  color: #888;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.lang {
+  margin-top: 20px;
+}
+
+.legal {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 20px;
+  }
+
+  .email-form {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .email-form input {
+    width: 100%;
+    align-items: center;
+    align-self: center;
+  }
+
+  .email-form button {
+    width: 50%;
+    align-self: center;
+  }
+}
